@@ -94,16 +94,7 @@ GBFB.org/DONATE" class="ng-scope"><!-- end ngRepeat: (key, value) in MetaTags.pr
   src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
 }</style><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style type="text/css"></style><link type="text/css" href="https://prod-frs.content.classy.org/prod/4.0.47/static/onetrust/skins/3.6.25/default_flat_bottom_two_button_white/v2/css/optanon.css" rel="stylesheet"><style>#optanon ul#optanon-menu li { background-color: #F7F9FA !important }#optanon ul#optanon-menu li.menu-item-selected { background-color: #FFFFFF !important }#optanon #optanon-popup-wrapper .optanon-white-button-middle { background-color: #4FC7B6 !important }.optanon-alert-box-wrapper .optanon-alert-box-button-middle { background-color: #4FC7B6 !important; border-color: #4FC7B6 !important; }#optanon #optanon-popup-wrapper .optanon-white-button-middle a { color: #ffffff !important }.optanon-alert-box-wrapper .optanon-alert-box-button-middle a { color: #ffffff !important }#optanon #optanon-popup-bottom { background-color: #EDF1F2 !important }#optanon.modern #optanon-popup-top, #optanon.modern #optanon-popup-body-left-shading { background-color: #EDF1F2 !important }.optanon-alert-box-wrapper { background-color:#F7F7F8 !important }.optanon-alert-box-wrapper .optanon-alert-box-bg p { color:#727E83 !important }</style><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,600,700,800" media="all"><script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="true"></script></head>
 <body class="event preload" ng-class="activeAppClass">
-<div class="status-banner animate-show ng-isolate-scope ng-hide" ng-show="visible" ng-class="banner.type" ng-style="banner.color &amp;&amp; {'background-color': banner.color}" aria-live="assertive" sc-status-banner="">
-        <div role="alert" aria-atomic="true">
-          <span class="status-banner_msg ng-binding" ng-bind-html="banner.msg | scTrustedHtml"></span>
-          <span class="sr-only ng-binding" ng-bind-html="banner.msgAccessibility | scTrustedHtml"></span>
-        </div>
-        <!-- ngIf: banner && banner.type!=='success' --><button class="status-banner_close " type="button" data-ng-click="close()" data-ng-if="banner &amp;&amp; banner.type!=='success'">
-          <i class="fa fa-times status-banner_icon"></i>
-          <span class="status-banner_close-msg">Close</span>
-        </button><!-- end ngIf: banner && banner.type!=='success' -->
-      </div>
+
 
 <!-- uiView: --><div data-ui-view="" class="ng-scope"><div data-ng-class="{ 'sc-flow-modal_blur': $root.flowModal.ui.blur }" class="public-page ng-scope"><!-- uiView: --><ui-view class="ng-scope"><!-- uiView: header --><div ui-view="header" class="ng-scope"></div>
 <!-- uiView: body --><div ui-view="body" class="public-page ng-scope"><div class="sc-block-sections ng-scope ng-isolate-scope" data-sc-truncate-view="truncateForDashboard" data-truncate-style="supporter-dashboard">
@@ -113,7 +104,7 @@ GBFB.org/DONATE" class="ng-scope"><!-- end ngRepeat: (key, value) in MetaTags.pr
     <!-- ngRepeat: section in page.block_sections --><div class="sc-block-section ng-scope" data-ng-repeat="section in page.block_sections" data-ng-class="{ body: $index === 1 }">
       <!-- ngRepeat: block in section.blocks --><!-- ngIf: !block.disable --><div class="sc-block ng-scope ng-isolate-scope" data-ng-repeat="block in section.blocks" data-ng-if="!block.disable" data-sc-render-block="block.id" data-page="page" data-campaign="campaign" data-theme="theme" data-team="team" data-fundraiser="fundraiser" data-organization="organization" data-public="true" data-editable="false" data-demo="previewMode"><div sc-header-block="" class="ng-scope"><div class="header-block ng-scope" data-ng-click="scrollToElement('sc-target-header')" role="banner">
 
-  <div class="header-block_wrapper">
+  <div class="header-block_wrapper" style="padding: 8px 30px;">
 
     <!-- Background -->
     <div class="sc-block_bg ng-isolate-scope" data-sc-block-bg="block.background" data-fallback-color="theme.current.styles.primaryColor">
@@ -137,44 +128,7 @@ GBFB.org/DONATE" class="ng-scope"><!-- end ngRepeat: (key, value) in MetaTags.pr
 
     <!-- Nav & Tools -->
 
-    <nav class="header-block_navigation" id="header-block_navigation" data-ng-disabled="demo" aria-label="profile" tabindex="0">
-
-      <!-- Search -->
-
-      <!-- ngIf: showSearchIcon --><a class="header-block_search ng-scope" data-ng-if="showSearchIcon" href="/campaign/covid-19/c277039/search" target="_self" aria-label="Go to fundraiser search page">
-        <i class="header-block_search-icon fa fa-search" data-ng-style="{ color: block.textColor }" aria-hidden="true" style="color: rgb(44, 52, 59);"></i>
-      </a><!-- end ngIf: showSearchIcon -->
-
-      <!-- Share -->
-
-      <button class="header-block_share ng-isolate-scope" data-ng-style="{ color: block.textColor }" data-sc-social-buttons="'tooltip'" type="button" aria-label="Share on Facebook, Share on Twitter, Share via Email" aria-haspopup="menu" aria-labelledby="social-dropdown-menu" style="color: rgb(44, 52, 59);">
-        <i class="header-block_share-icon ci ci-share-o" data-ng-style="{ color: block.textColor }" aria-hidden="true" style="color: rgb(44, 52, 59);"></i>
-      </button>
-
-      <!-- Cart -->
-
-      <!-- ngIf: campaign.current.type === 'reg_w_fund' || campaign.current.type == 'ticketed' -->
-
-      <!-- P2P dropdown -->
-
-      <!-- ngIf: (campaign.current.type === 'p2p' || campaign.current.type === 'reg_w_fund') && loggedIn -->
-
-      <!-- Login and member tools -->
-
-      <!-- ngIf: loggedIn -->
-
-      <!-- ngIf: !loggedIn --><button class="header-block_login ng-scope" role="button" data-ng-if="!loggedIn" type="button" data-ng-click="login()" data-ng-style="{ color: block.textColor }" style="color: rgb(44, 52, 59);">
-        Login
-      </button><!-- end ngIf: !loggedIn -->
-
-      <!--Mobile hamburger nav -->
-
-      <button class="header-block_hamburger-toggle unstyled-button" data-ng-click="openMobileMenu($event)" aria-haspopup="true" aria-expanded="false" aria-label="open navigation menu">
-        <i class="fa fa-bars" data-ng-style="{color: block.textColor}" style="color: rgb(44, 52, 59);"></i>
-    </button>
-
-    </nav>
-
+    
   </div>
 
 </div></div></div><!-- end ngIf: !block.disable --><!-- end ngRepeat: block in section.blocks -->
