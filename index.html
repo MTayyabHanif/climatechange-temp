@@ -255,52 +255,7 @@ GBFB.org/DONATE" class="ng-scope"><!-- end ngRepeat: (key, value) in MetaTags.pr
       </p>
       <!-- ngIf: searchOptionsLoaded --><div data-sc-resource-search="search.configuration" data-ng-if="searchOptionsLoaded" data-context="{campaign_id: campaignId}" data-on-select="search.go($selection, $type)" data-ng-model="search.selected" data-resource-type="search.type" class="ng-pristine ng-untouched ng-valid ng-scope ng-isolate-scope ng-empty"><div class="resource-search_container no-select" data-ng-class="{'has-selection': scope.selection, 'no-select': !scope.showDropdown() }">
 
-  <div class="resource-search_input-container">
-
-    <select class="resource-search_input-select" data-ng-show="showDropdown()" data-ng-model="activeMode" data-ng-disabled="disabled" data-ng-options="mode as mode.label for mode in modes"><option label="Fundraising Page" value="object:185" selected="selected">Fundraising Page</option><option label="Fundraiser" value="object:186">Fundraiser</option><option label="Fundraising Team" value="object:187">Fundraising Team</option><option label="Team Lead" value="object:188">Team Lead</option></select>
-
-    <input class="resource-search_input-query-primary ng-empty" autocomplete="off" data-ng-show="!selection" data-ng-model="query" data-ng-disabled="disabled" id="resource-search-input" ng-keydown="onSearchBoxKeydown($event)" data-sc-focus="focusSearchBox" role="textbox" name="scResourceSearchQuery" data-ng-focus="onFocus()" data-ie-model-fix="" placeholder="Start typing to search fundraisers" qa-id="resource-search" aria-haspopup="true" aria-activedescendant="search-result-container">
-
-    <span class="resource-search_input-mock ng-hide" data-ng-show="selection" role="listbox">
-
-      <span class="resource-search_input-mock-value" id="search-result-selected" aria-label="Selected creditee " aria-live="polite">
-
-        <img class="resource-search_input-mock-image" data-ng-show="::features.image" aria-hidden="true">
-
-        <span class="resource-search_input-mock-name" aria-live="polite"></span>
-
-        <button class="resource-search_input-mock-clear ci ci-close-x" data-sc-focus="focusRemoveButton" type="button" data-ng-click="clearSelection()" aria-label="Remove creditee "></button>
-
-      </span>
-
-    </span>
-
-  </div>
-
-  <!-- ngIf: showResults() -->
-
-  <div class="resource-search_fetching ng-hide" data-ng-show="isFetchingResults()">
-
-    <div class="resource-search_fetching-row">
-      <span class="resource-search_fetching-row-image"></span>
-      <span class="resource-search_fetching-row-text"></span>
-    </div>
-
-    <div class="resource-search_fetching-row">
-      <span class="resource-search_fetching-row-image"></span>
-      <span class="resource-search_fetching-row-text"></span>
-    </div>
-
-    <div class="resource-search_fetching-row">
-      <span class="resource-search_fetching-row-image"></span>
-      <span class="resource-search_fetching-row-text"></span>
-    </div>
-
-  </div>
-
-  <div class="resource-search_empty ng-hide" id="search-result--empty" data-ng-show="isResultsEmpty()" role="listbox" aria-label="No results found">
-    No results found
-  </div>
+ 
 
 </div>
 </div><!-- end ngIf: searchOptionsLoaded -->
